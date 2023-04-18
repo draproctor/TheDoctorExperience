@@ -17,10 +17,6 @@ if ($PSVersionTable.PSVersion.Major -eq 5) {
   Import-Module -Name 'AzureAD' -ErrorAction 'Continue'
 }
 
-if (!$IsMacOS) {
-  Import-Module -Name 'FbitMessaging' -ErrorAction 'Continue'
-}
-
 if ((Get-Module -Name 'PSReadline').Version -le '2.1') {
   Remove-Module -Name 'PSReadline'
   Import-Module -Name 'PSReadLine' -MinimumVersion '2.1.0'
